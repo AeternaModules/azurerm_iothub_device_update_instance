@@ -1,3 +1,7 @@
+output "iothub_device_update_instances_id" {
+  description = "Map of id values across all iothub_device_update_instances, keyed the same as var.iothub_device_update_instances"
+  value       = { for k, v in azurerm_iothub_device_update_instance.iothub_device_update_instances : k => v.id }
+}
 output "iothub_device_update_instances_device_update_account_id" {
   description = "Map of device_update_account_id values across all iothub_device_update_instances, keyed the same as var.iothub_device_update_instances"
   value       = { for k, v in azurerm_iothub_device_update_instance.iothub_device_update_instances : k => v.device_update_account_id }
