@@ -17,7 +17,7 @@ EOT
     device_update_account_id = string
     iothub_id                = string
     name                     = string
-    diagnostic_enabled       = optional(bool) # Default: false
+    diagnostic_enabled       = optional(bool)
     tags                     = optional(map(string))
     diagnostic_storage_account = optional(object({
       connection_string = string
